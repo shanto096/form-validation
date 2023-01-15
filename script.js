@@ -17,18 +17,22 @@ const submit = document.getElementById("submit");
 
 
 function singUp() {
+    
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const age = document.getElementById("age").value;
     const gender = document.getElementById("gender").value;
-    
+    const total =(name + email +password +age +gender)
     localStorage.setItem("name",name);
     localStorage.setItem("email",email)
     localStorage.setItem("password",password)
     localStorage.setItem("age",age)
     localStorage.setItem("gender",gender)
-    window.location.href = "home.html"
+    if (total) {
+        window.location.href = "home.html"   
+    }
+    
 }
 const loginBtn = document.getElementById("login");
 
